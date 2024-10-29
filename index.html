@@ -27,7 +27,7 @@
                                 <label for="cantidad">Valor:</label>
                                 <input type="number" class="form-control" id="cantidad" placeholder="Valor en $" required>
                             </div>
-                            <button type="submit" class="btn btn-danger">Agregar</button>
+                            <button type="submit" class="btn btn-danger" onclick="ui.agregarGastoListado()">Agregar</button>
                             
                         </form>
                     </div><!--Contenido gastos-->
@@ -36,7 +36,7 @@
                         <div class="contenido-lista">
                             <h2 class="text-center">LISTADO DE GASTOS</h2>
                             <div id="gastos">
-                                <ul class="list-group"></ul>
+                                <ul class="list-group" id="lista"></ul>
                             </div>
                             <div id="presupuesto" class="presupuesto">
                                 <div class="alert alert-warning">

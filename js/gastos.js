@@ -65,10 +65,23 @@ class UI
         
  }
 
-//insertar el gasto en la lista
-agregarGastoListado(gasto){
+    agregarGastoListado() {
+        let valorGasto = document.getElementById("gasto").value
+        let valorCantidad = document.getElementById("cantidad").value
+        
+        let listaHTML = document.getElementById("lista")
+        let idGastoHTML = Date.now()
+        let gastoHTML = `<li id="${idGastoHTML}">
+                            Gasto: ${valorGasto} Cantidad: ${valorCantidad}
+                            <button onclick="ui.eliminarGasto(${idGastoHTML})">Eliminar</button>
+                        </li>`
+        listaHTML.innerHTML += gastoHTML    
+    }
 
-}
+    eliminarGasto(id) {
+        let gastoHTML = document.getElementById(id)
+        gastoHTML.remove()
+    }
 
 }
 
@@ -92,6 +105,7 @@ function preguntarpresupuesto(){
     //mostrar en el html el valor del presupuesto ingresado
     ui.insertarpresupuesto(presupuesto);
 }
+
 //leer lo registrado en el formulario
 function agregarGasto(e){
     e.preventDefault();
@@ -110,4 +124,7 @@ function agregarGasto(e){
         ui.ImprimirAlerta('El valor del gasto no puede ser negativo', 'error');
      }
      
+//lista
+
+
 }
