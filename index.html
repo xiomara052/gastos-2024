@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/gastos-2024/css/bootstrap.css">
-    <link rel="stylesheet" href="/gastos-2024/css/estilos.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="/css/estilos.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="/gastos-2024/js/bootstrap.js"></script>
+    <script src="js/bootstrap.js"></script>
 </head>
 <body>
     <div class="container">
-        <header> n
+        <header>
             <h1 class="text-center">CONTROL DE GASTOS</h1>
         </header>
         <section class="contenido-principal">
@@ -21,11 +21,11 @@
                         <form id="agregar-gasto" action="#">
                             <div class="form-group">
                                 <label for="gasto">Gasto:</label>
-                                <input type="text" class="form-control" id="gasto" placeholder="Nombre del gasto">
+                                <input type="text" class="form-control" id="gasto" placeholder="Nombre del gasto" required>
                             </div>
                             <div class="form-group">
                                 <label for="cantidad">Valor:</label>
-                                <input type="number" class="form-control" id="cantidad" placeholder="Valor en $">
+                                <input type="number" class="form-control" id="cantidad" placeholder="Valor en $" required>
                             </div>
                             <button type="submit" class="btn btn-danger">Agregar</button>
                             
@@ -47,15 +47,12 @@
                                 </div>
 
                             </div><!--presupuesto-->
-
                         </div><!--contenido de la lista-->
-
                     </div><!--col-->
-
                 </div><!--row-->
 
         </section>
     </div><!--contenedor-->
-    <script src="/gastos-2024/js/gastos.js"></script>
+    <script src="js/gastos.js"></script>
 </body>
 </html>
